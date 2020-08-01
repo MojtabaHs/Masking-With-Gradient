@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17140" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17115"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Masking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="3Vj-nf-HsC" customClass="MaskableImageView" customModule="Masking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This text should be faded out when going down ward in the screen" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jeG-MD-6wn" customClass="MaskableView" customModule="Masking" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="92"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="maskImage" value="GR"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jeG-MD-6wn" secondAttribute="bottom" id="DKQ-Tv-qOp"/>
+                            <constraint firstItem="jeG-MD-6wn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JTE-Ct-CVe"/>
+                            <constraint firstItem="3Vj-nf-HsC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xov-tQ-bQS"/>
+                            <constraint firstItem="3Vj-nf-HsC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="fmi-Fe-kk4"/>
+                            <constraint firstItem="3Vj-nf-HsC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jao-Wg-s5B"/>
+                            <constraint firstAttribute="bottom" secondItem="3Vj-nf-HsC" secondAttribute="bottom" id="jpM-l5-DtD"/>
+                            <constraint firstItem="jeG-MD-6wn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r35-rM-54z"/>
+                            <constraint firstItem="jeG-MD-6wn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tVj-kF-29f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BG" width="546" height="858"/>
+        <image name="GR" width="300" height="325"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
